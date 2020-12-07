@@ -1,0 +1,16 @@
+{%  extends "todo/layout.html" %}
+{% load static %}
+
+
+{% block body %}
+    <link rel="stylesheet" href="{% static 'hello/hello_style.css' %}">
+    <h1>
+    <ul>
+    {%  for task in tasks %}
+        <li> {{ task }}</li>
+
+        {% endfor %}
+    </ul>
+    </h1>
+  <h2><a href="{% url 'todo:add' %}"> Add task </a></h2>
+{% endblock %}
