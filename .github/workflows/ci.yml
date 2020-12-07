@@ -24,7 +24,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       - name: Run Django unit test
-        run : 
+        run : |
               pip install --user django
               python manage.py test
       
